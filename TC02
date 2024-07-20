@@ -1,0 +1,25 @@
+//tinkercad
+// C++ code
+int dt = 0;
+int temp;
+void setup()
+{
+  pinMode(4, OUTPUT);
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  dt = analogRead(A0);
+  temp = map(dt, 20, 358, -40, 125);
+  Serial.print("temp = ");
+  Serial.println(temp);
+  if(temp >= 30){
+    digitalWrite(4,HIGH);
+  }else{
+    digitalWrite(4,LOW);
+  }
+//delay(ms) 
+  delay(500);
+}

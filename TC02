@@ -20,6 +20,6 @@ void loop()
   }else{
     digitalWrite(4,LOW);
   }
-    
+//delay(ms) 
   delay(500);
 }
